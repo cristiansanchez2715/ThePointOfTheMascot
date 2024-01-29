@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+body, html{
+    background-color: rgb(1, 130, 87);
+    font-family: 'Fredoka One', sans-serif;
+      
+}
+
+h1, p{
+    color: #f5f5dc;; 
+}
+
+h2{
+  color:  #8FED92;
+}
+
+button {
+    background-color: #8FED92; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave en el cambio de color de fondo */
+  }
+  
+  /* Estilos cuando el ratón está sobre el botón */
+  button:hover {
+    background-color: #5FCA76; /* Cambia el color de fondo al pasar el ratón */
+  }
+  
+  /* Estilos cuando el botón está activo (clicado) */
+  button:active {
+    background-color: #3C7842; /* Cambia el color de fondo al hacer clic */
+  }
+  
+
+  @media(max-width: 320px){
+    body, html{
+        display: none;
+    }
+  }
+
+  @media(min-width: 320px){
+    .item-barnav {
+        margin-left: 0px;
+    }
+
+    .etiquetas-container {
+        background-color: black;
+        color: white;
+        gap: 50px;
+        margin-top: 100px;
+        height: 30px;
+        margin-top: 0;
+        width: 100%;
+       text-align: center;
+    }
+
+    form {
+        max-width: 300px; /* Ancho máximo para el formulario */
+        margin: 0 auto; /* Centra el formulario horizontalmente */
+      }
+    
+      label {
+        display: block; /* Muestra las etiquetas en una nueva línea */
+        margin-bottom: 0.5em; /* Espacio entre etiquetas y campos de entrada */
+      }
+    
+      input {
+        width: 100%; /* Ocupa el ancho completo del contenedor */
+        margin-bottom: 1em; /* Espacio entre campos de entrada */
+      }
+  }

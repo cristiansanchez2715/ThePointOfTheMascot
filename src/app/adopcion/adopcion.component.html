@@ -1,0 +1,25 @@
+
+<h1>Deseas poner un animalito en adopcion?</h1>
+<br>
+<div>
+  <button (click)="toggleMostrarFormularioAdopcion()">Poner en Adopcion</button>
+</div>
+
+<div *ngIf="mostrarFormularioAdopcion">
+  <form [formGroup]="donarMascotaForm" (ngSubmit)="enviarFormulario()">
+    <input formControlName="nombre" placeholder="nombre mascota" id="nombre-mascota" >
+    <input formControlName="raza" placeholder="raza mascota" id="raza-mascota" >
+    <input formControlName="edad" placeholder="edad mascota" id="edad-mascota" >
+    <input formControlName="contacto" placeholder="numero de contacto" id="nombre-mascota" >
+
+    <button type="submit">Enviar Formulario</button>
+  </form>
+
+
+</div>
+
+<h1>Lista animales en adopcion!</h1>
+<div *ngFor="let mascota of mascotasEnAdopcion">
+<h2>{{mascota.nombre}} - {{mascota.raza}} - {{mascota.edad}} --- <a target="_blank" href="https://wa.me/{{mascota.contacto}}">Contactar</a> </h2>
+
+</div>

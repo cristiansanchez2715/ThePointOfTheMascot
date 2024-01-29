@@ -1,0 +1,31 @@
+<h1>Aquí puedes donar tu alimento!</h1>
+
+<div>
+  <button class="button" (click)="toggleFormulario()">Donar alimento</button>
+</div>
+
+<div *ngIf="mostrarFormulario">
+  <form [formGroup]="donarAlimentoForm">
+    <label for="marca">Marca:</label>
+    <input id="marca" formControlName="marca" required>
+
+    <label for="gramaje">Gramaje:</label>
+    <input id="gramaje" formControlName="gramaje" type="number" required>
+
+    <label for="tipo">Cachorro o Adulto:</label>
+    <input  id="tipo" formControlName="tipo" required>
+
+    <label title="recuerde que su numero de contacto es vital para encontrarse con la persona que necesite el alimento" for="numero">Numero de Contacto</label>
+    <input id="numero" formControlName="numero" required>
+
+    <button type="button" (click)="donarAlimento()">Donar Alimento</button>
+  </form>
+</div>
+
+<div>
+  <h1>Alimento disponible</h1>
+
+  <div *ngFor="let alimento of alimentosDisponibles">
+    <h2>{{ alimento.marca }} - {{ alimento.gramaje }}g - {{ alimento.tipo }} --- <a target="_blank" href="https://wa.me/{{alimento.numero}}">Contactar</a> </h2>
+  </div>
+</div>
