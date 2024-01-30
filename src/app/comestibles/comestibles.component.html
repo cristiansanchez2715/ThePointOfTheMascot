@@ -7,16 +7,16 @@
 <div *ngIf="mostrarFormulario">
   <form [formGroup]="donarAlimentoForm">
     <label for="marca">Marca:</label>
-    <input id="marca" formControlName="marca" required>
+    <input id="marca" formControlName="Marca" required>
 
     <label for="gramaje">Gramaje:</label>
-    <input id="gramaje" formControlName="gramaje" type="number" required>
+    <input id="gramaje" formControlName="Gramaje" type="number" required>
 
     <label for="tipo">Cachorro o Adulto:</label>
-    <input  id="tipo" formControlName="tipo" required>
+    <input  id="tipo" formControlName="Tipo" required>
 
     <label title="recuerde que su numero de contacto es vital para encontrarse con la persona que necesite el alimento" for="numero">Numero de Contacto</label>
-    <input id="numero" formControlName="numero" required>
+    <input id="numero" formControlName="Numero" required>
 
     <button type="button" (click)="donarAlimento()">Donar Alimento</button>
   </form>
@@ -26,6 +26,6 @@
   <h1>Alimento disponible</h1>
 
   <div *ngFor="let alimento of alimentosDisponibles">
-    <h2>{{ alimento.marca }} - {{ alimento.gramaje }}g - {{ alimento.tipo }} --- <a target="_blank" href="https://wa.me/{{alimento.numero}}">Contactar</a> </h2>
+    <h2>{{ alimento.Marca }} - {{ alimento.Gramaje }}g - {{ alimento.Tipo }} --- <a target="_blank" href="https://wa.me/{{alimento.Numero}}">Contactar</a> </h2>
   </div>
 </div>
